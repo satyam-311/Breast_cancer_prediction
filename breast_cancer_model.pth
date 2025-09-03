@@ -1,0 +1,3 @@
+# Save the trained model
+torch.save(model.state_dict(), "breast_cancer_model.pth")
+print("✅ Model saved as breast_cancer_model.pth")
