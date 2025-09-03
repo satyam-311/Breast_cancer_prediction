@@ -76,6 +76,9 @@ for epoch in range(epochs):
 
     if (epoch+1) % 10 == 0:
         print(f"Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}")
+ # Save the trained model
+torch.save(model.state_dict(), "breast_cancer_model.pth")
+
 
 
 # %%
@@ -115,6 +118,7 @@ if st.button("Predict Cancer Status"):
         st.error("Prediction: **Malignant (Cancerous)** ⚠️")
 
 # %%
+
 
 
 
